@@ -1,0 +1,8 @@
+#!/usr/bin/python
+# -*- coding: UTF-8 -*-
+import math
+print('Hello, World! 你好哦')
+
+print 'hello'
+
+print math.fabs(-10)

@@ -1,0 +1,17 @@
+
+# -*- coding: utf-8 -*-
+#题目：有1、2、3、4个数字，能组成多少个互不相同且无重复数字的三位数？都是多少？
+
+
+def les1_func(l):
+
+    allNum = []
+    for i in l:
+        for j in l:
+            for k in l:
+                if i != j and j != k and i != k:
+                    num = i*100+j*10+k
+                    allNum.append(num)
+    return allNum
+
+print les1_func([1, 2, 3, 4])
