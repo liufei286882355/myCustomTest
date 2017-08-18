@@ -52,6 +52,17 @@ jhon.meninfo(jhon.name, jhon.age, jhon.sex)
 
 
 class Teacher(object):
+
+
+    #类属性
+    work = '教书育人'
+
+
+    @classmethod    #类方法装饰器
+    def get_work(cls):
+        return cls.work
+
+
     #这个就是getter的方法
     @property
     def score(self):
@@ -91,3 +102,4 @@ print str(teacher.score)
 teacher.birth = 1989
 print str(teacher.age)
 
+print Teacher.get_work()

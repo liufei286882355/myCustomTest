@@ -15,11 +15,19 @@
 #__str__
 
 class Student(object):
+
+    def __new__(cls, *args, **kwargs):
+        print 'call __new__ method'
+        print args
+        return super(Student, cls).__new__(cls, *args, **kwargs)
+
+
     def __init__(self, name):
         self.name = name
 
 print (Student('Michael'))#这时候输出的结果是 <__main__.Student object at 0x1095a01d0>这样类似的
 #如果我们想要打印的好看,或者打印出来自己需要的内容,那么我们就可以像以下这样做
+
 
 class StudentCustom(object):
     def __init__(self, name):
@@ -121,7 +129,5 @@ print w.dosomething()
 #跑出AttributeError的错误
 
 print w.money
-
-
 
 
